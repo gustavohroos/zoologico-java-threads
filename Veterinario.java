@@ -11,12 +11,13 @@ public class Veterinario implements Runnable {
     }
 
     public void run() {
-        
-        for(Comedouro c : this.comedouros){
-            try {
-                c.encher(this);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        while(true){
+            for(Comedouro c : this.comedouros){
+                try {
+                    c.encher(this);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
