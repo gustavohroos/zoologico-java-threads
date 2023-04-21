@@ -7,23 +7,19 @@ class Comedouro {
         this.tipo = tipo;
     }
 
-    synchronized void comer(Animal animal) throws InterruptedException {
+    synchronized void comer(Animal animal, int quantidade) throws InterruptedException {
         while (comida < animal.consomeMin) {
-            System.out.println(animal.especie + animal.id + " está esperando comida.");
+            System.out.println(animal.especie + " " + animal.id + " está esperando comida.");
+            System.out.println("Comida no comedouro: " + this.comida);
             wait();
         }
-        System.out.println(animal.especie + animal.id + " está comendo.");
-        comida -= animal.comidaConsumida;
+        System.out.println(animal.especie + " " + animal.id + " está comendo.");
+        this.comida -= quantidade;
         notifyAll();
     }
 
     synchronized void encher(Veterinario veterinario) throws InterruptedException {
-        while (comida > 0) {
-            System.out.println("O veterinário " + veterinario.nome + " está esperando o comedouro esvaziar.");
-            wait();
-        }
-        System.out.println("O veterinário " + veterinario.nome + " está enchendo o comedouro.");
-        comida = capacidade;
+        this.comida = capacidade;
         notifyAll();
     }
 }
