@@ -14,7 +14,10 @@ public class Fornecedor implements Runnable {
             for(Estoque e : this.estoques){
                 if(e.quantidade == 0){
                     try {
-                        for(Estoque e2 : this.estoques){
+                        e.reabastecer(this);
+                        ArrayList<Estoque> estoques2 = estoques;
+                        estoques2.remove(e);
+                        for(Estoque e2 : estoques2){
                             e2.reabastecer(this);
                         }
                     } catch (InterruptedException e1) {
