@@ -10,7 +10,7 @@ public class Fornecedor implements Runnable {
     }
     
     public void run() {
-        while(true) {
+        while(!Thread.currentThread().isInterrupted()) {
             for(Estoque e : this.estoques){
                 if(e.quantidade == 0){
                     try {

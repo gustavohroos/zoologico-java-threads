@@ -11,7 +11,7 @@ public class Veterinario implements Runnable {
     }
 
     public void run() {
-        while(true){
+        while(!Thread.currentThread().isInterrupted()){
             for(Comedouro c : this.comedouros){
                 try {
                     c.encher(this);
