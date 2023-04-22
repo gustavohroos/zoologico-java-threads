@@ -14,16 +14,11 @@ public class Fornecedor implements Runnable {
             try{
                 for(Estoque e : this.estoques){
                     if(e.quantidade == 0){
-                        try {
-                            e.reabastecer(this);
-                            ArrayList<Estoque> estoques2 = estoques;
-                            estoques2.remove(e);
-                            for(Estoque e2 : estoques2){
-                                e2.reabastecer(this);
-                            }
-                        } catch (InterruptedException e1) {
-                            return;
+                        for(Estoque e2 : this.estoques){
+                            System.out.println("O fornecedor " + this.nome + " está enchendo o estoque de " + e.tipo + ".");
+                            e2.reabastecer(this);
                         }
+                        
                     }
                 }
             } catch (Exception e) {

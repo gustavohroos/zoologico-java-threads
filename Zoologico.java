@@ -18,24 +18,29 @@ class Zoologico{
 
     Zoologico(int dias) {
         this.dias = dias;
-        this.estoques.add(new Estoque("Carne"));
-        this.estoques.add(new Estoque("Composto"));
-        this.estoques.add(new Estoque("Pasto"));
-        
-        Comedouro comedouro1 = new Comedouro("Carne");
-        Comedouro comedouro2 = new Comedouro("Composto");
-        Comedouro comedouro3 = new Comedouro("Pasto");
-        
-        comedouros.add(comedouro1);
-        comedouros.add(comedouro2);
-        comedouros.add(comedouro3);
 
-        Veterinario veterinario1 = new Veterinario(comedouros, "Vanderlei");
+        Estoque estoqueCarne = new Estoque("Carne");
+        Estoque estoqueComposto = new Estoque("Composto");
+        Estoque estoquePasto = new Estoque("Pasto");
+
+        Comedouro comedouroCarne = new Comedouro("Carne", estoqueCarne);
+        Comedouro comedouroComposto = new Comedouro("Composto", estoqueComposto);
+        Comedouro comedouroPasto = new Comedouro("Pasto", estoquePasto);
+
+        this.estoques.add(estoqueCarne);
+        this.estoques.add(estoqueComposto);
+        this.estoques.add(estoquePasto);
+        
+        this.comedouros.add(comedouroCarne);
+        this.comedouros.add(comedouroComposto);
+        this.comedouros.add(comedouroPasto);
+
+        Veterinario veterinario1 = new Veterinario(this.comedouros, "Vanderlei");
         Thread threadVeterinario1 = new Thread(veterinario1);
         this.threads.add(threadVeterinario1);
         this.veterinarios.add(veterinario1);
 
-        Veterinario veterinario2 = new Veterinario(comedouros, "Lindomar");
+        Veterinario veterinario2 = new Veterinario(this.comedouros, "Lindomar");
         Thread threadVeterinario2 = new Thread(veterinario2);
         this.threads.add(threadVeterinario2);
         this.veterinarios.add(veterinario2);
@@ -46,21 +51,21 @@ class Zoologico{
         this.fornecedor = fornecedor;
         
         for(int i = 0; i < 4; i++) {
-            Leao leao = new Leao(comedouro1, i+1);
+            Leao leao = new Leao(comedouroCarne, i+1);
             Thread threadLeao = new Thread(leao);
             this.threads.add(threadLeao);
             this.animais.add(leao);
         }
 
         for(int i = 0; i < 10; i++) {
-            Suricato suricato = new Suricato(comedouro2, i+1);
+            Suricato suricato = new Suricato(comedouroComposto, i+1);
             Thread threadSuricato = new Thread(suricato);
             this.threads.add(threadSuricato);
             this.animais.add(suricato);
         }
 
         for(int i = 0; i < 7; i++) {
-            Avestruz avestruz = new Avestruz(comedouro3, i+1);
+            Avestruz avestruz = new Avestruz(comedouroPasto, i+1);
             Thread threadAvestruz = new Thread(avestruz);
             this.threads.add(threadAvestruz);
             this.animais.add(avestruz);

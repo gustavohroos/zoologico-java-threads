@@ -47,7 +47,7 @@ class Animal implements Runnable {
                 Thread.sleep(1000 * tempoDeSono);
                 this.horasDormidas += tempoDeSono;
 
-                Thread.sleep((1000 * 24) - (1000 * tempoDeSono)); // Passa um dia
+                // Thread.sleep((1000 * 24) - (1000 * tempoDeSono)); // Passa um dia
 
             } catch (InterruptedException e) {
                 return;
