@@ -50,7 +50,7 @@ class Zoologico{
         this.threads.add(threadFornecedor);
         this.fornecedor = fornecedor;
         
-        for(int i = 0; i < 4; i++) {
+        for(int i = 0; i < 10; i++) {
             Leao leao = new Leao(comedouroCarne, i+1);
             Thread threadLeao = new Thread(leao);
             this.threads.add(threadLeao);
@@ -64,7 +64,7 @@ class Zoologico{
             this.animais.add(suricato);
         }
 
-        for(int i = 0; i < 7; i++) {
+        for(int i = 0; i < 10; i++) {
             Avestruz avestruz = new Avestruz(comedouroPasto, i+1);
             Thread threadAvestruz = new Thread(avestruz);
             this.threads.add(threadAvestruz);
@@ -122,13 +122,13 @@ class Zoologico{
             }
         }
 
-        System.out.println("Média de comida consumida pelos leões por refeição: " + totalComidaLeoes / 4 / this.dias / 2);
+        System.out.println("Média de comida consumida pelos leões por refeição: " + totalComidaLeoes / 10 / this.dias / 2);
         System.out.println("Média de comida consumida pelos suricatos por refeição: " + totalComidaSuricatos / 10 / this.dias / 2);
-        System.out.println("Média de comida consumida pelos avestruzes por refeição: " + totalComidaAvestruzes / 7 / this.dias / 2);
+        System.out.println("Média de comida consumida pelos avestruzes por refeição: " + totalComidaAvestruzes / 10 / this.dias / 2);
 
-        System.out.println("Média de horas dormidas pelos leões por dia: " + totalHorasDormidasLeoes / 4 / this.dias);
+        System.out.println("Média de horas dormidas pelos leões por dia: " + totalHorasDormidasLeoes / 10 / this.dias);
         System.out.println("Média de horas dormidas pelos suricatos por dia: " + totalHorasDormidasSuricatos / 10 / this.dias);
-        System.out.println("Média de horas dormidas pelos avestruzes por dia: " + totalHorasDormidasAvestruzes / 7 / this.dias);
+        System.out.println("Média de horas dormidas pelos avestruzes por dia: " + totalHorasDormidasAvestruzes / 10 / this.dias);
 
         System.out.println("Fim do programa");
     }

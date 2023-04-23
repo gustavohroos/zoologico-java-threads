@@ -21,9 +21,8 @@ class Animal implements Runnable {
         while(true){
             try {
                 // O animal começa a comer
-                System.out.println(this.especie + " " + this.id + " começou a comer.");
                 int comidaConsumidaNessaRefeicao = rand.nextInt(this.consomeMax - this.consomeMin + 1) + this.consomeMin;
-                System.out.println(this.especie + " " + this.id + " vai comer " + comidaConsumidaNessaRefeicao + " unidades de comida.");
+                System.out.println(this.especie + " " + this.id + " quer comer " + comidaConsumidaNessaRefeicao + " unidades de comida.");
                 comedouro.comer(this, comidaConsumidaNessaRefeicao);
                 Thread.yield();
 
@@ -33,10 +32,9 @@ class Animal implements Runnable {
                 System.out.println(this.especie + " " + this.id + " começou a se exibir.");
 
                 // O animal começa a comer de novo
-                System.out.println(this.especie + " " + this.id + " começou a comer.");
                 comidaConsumidaNessaRefeicao = rand.nextInt(this.consomeMax - this.consomeMin + 1) + this.consomeMin;
                 this.comidaConsumida += comidaConsumidaNessaRefeicao;
-                System.out.println(this.especie + " " + this.id + " vai comer " + comidaConsumidaNessaRefeicao + " unidades de comida.");
+                System.out.println(this.especie + " " + this.id + " quer comer " + comidaConsumidaNessaRefeicao + " unidades de comida.");
                 comedouro.comer(this, comidaConsumidaNessaRefeicao);
                 Thread.yield();
                 
@@ -47,7 +45,7 @@ class Animal implements Runnable {
                 Thread.sleep(1000 * tempoDeSono);
                 this.horasDormidas += tempoDeSono;
 
-                // Thread.sleep((1000 * 24) - (1000 * tempoDeSono)); // Passa um dia
+                Thread.sleep((1000 * 24) - (1000 * tempoDeSono)); // Passa um dia
 
             } catch (InterruptedException e) {
                 return;
