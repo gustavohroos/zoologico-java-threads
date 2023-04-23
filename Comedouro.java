@@ -11,13 +11,32 @@ class Comedouro {
 
     synchronized void comer(Animal animal, int quantidade) throws InterruptedException {
         while (comida < animal.consomeMin) {
-            System.out.println(animal.especie + " " + animal.id + " está esperando comida.");
-            System.out.println("Comida no comedouro: " + this.comida);
+
+            if(animal.especie == "Leão"){
+                System.out.println("\u001B[31m" + animal.especie + " " + animal.id + " está esperando comida." + "\u001B[0m");
+                System.out.println("\u001B[31m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
+            } else if(animal.especie == "Suricato"){
+                System.out.println("\u001B[33m" + animal.especie + " " + animal.id + " está esperando comida." + "\u001B[0m");
+                System.out.println("\u001B[33m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
+            } else if(animal.especie == "Avestruz"){
+                System.out.println("\u001B[32m" + animal.especie + " " + animal.id + " está esperando comida." + "\u001B[0m");
+                System.out.println("\u001B[32m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
+            }
             wait(500);
         }
-        System.out.println(animal.especie + " " + animal.id + " está comendo.");
-        System.out.println("Comida no comedouro: " + this.comida);
-        System.out.println("Comida consumida: " + quantidade);
+        if(animal.especie == "Leão"){
+            System.out.println("\u001B[31m" + animal.especie + " " + animal.id + " está comendo." + "\u001B[0m");
+            System.out.println("\u001B[31m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
+            System.out.println("\u001B[31m" + "Comida consumida: " + quantidade + "\u001B[0m");
+        } else if(animal.especie == "Suricato"){
+            System.out.println("\u001B[33m" + animal.especie + " " + animal.id + " está comendo." + "\u001B[0m");
+            System.out.println("\u001B[33m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
+            System.out.println("\u001B[33m" + "Comida consumida: " + quantidade + "\u001B[0m");
+        } else if(animal.especie == "Avestruz"){
+            System.out.println("\u001B[32m" + animal.especie + " " + animal.id + " está comendo." + "\u001B[0m");
+            System.out.println("\u001B[32m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
+            System.out.println("\u001B[32m" + "Comida consumida: " + quantidade + "\u001B[0m");
+        }
         this.comida -= quantidade;
         notifyAll();
     }
@@ -27,7 +46,6 @@ class Comedouro {
             wait(500);
         }
         if(this.estoque.quantidade < (this.capacidade - this.comida)){
-            System.out.println("Quantidade no estoque: " + this.estoque.quantidade);
             this.comida += this.estoque.quantidade;
             this.estoque.quantidade = 0;
         } else {
