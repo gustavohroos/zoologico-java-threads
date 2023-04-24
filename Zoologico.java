@@ -5,6 +5,7 @@ import java.util.TimerTask;
 class Zoologico{
     ArrayList<Comedouro> comedouros = new ArrayList<Comedouro>();
     ArrayList<Thread> threads = new ArrayList<Thread>();
+    ArrayList<Thread> animalThreads = new ArrayList<Thread>();
     ArrayList<Estoque> estoques = new ArrayList<Estoque>();
     ArrayList<Leao> leoes = new ArrayList<Leao>();
     ArrayList<Suricato> suricatos = new ArrayList<Suricato>();
@@ -52,34 +53,40 @@ class Zoologico{
         this.threads.add(threadFornecedor);
         this.fornecedor = fornecedor;
         
-        for(int i = 0; i < 4; i++) {
-            Leao leao = new Leao(comedouroCarne, i+1);
-            Thread threadLeao = new Thread(leao);
-            this.threads.add(threadLeao);
-            this.leoes.add(leao);
-        }
-
         for(int i = 0; i < 10; i++) {
             Suricato suricato = new Suricato(comedouroComposto, i+1);
             Thread threadSuricato = new Thread(suricato);
-            this.threads.add(threadSuricato);
+            this.animalThreads.add(threadSuricato);
             this.suricatos.add(suricato);
         }
 
         for(int i = 0; i < 7; i++) {
             Avestruz avestruz = new Avestruz(comedouroPasto, i+1);
             Thread threadAvestruz = new Thread(avestruz);
-            this.threads.add(threadAvestruz);
+            this.animalThreads.add(threadAvestruz);
             this.avestruzes.add(avestruz);
         }
+        for(int i = 0; i < 4; i++) {
+            Leao leao = new Leao(comedouroCarne, i+1);
+            Thread threadLeao = new Thread(leao);
+            this.animalThreads.add(threadLeao);
+            this.leoes.add(leao);
+        }
+
     }
 
     void iniciar() throws InterruptedException {
+
+        System.out.println("Iniciando programa");
+        System.out.println("Quantidade de threads: " + (this.threads.size() + this.animalThreads.size()));
+
         for(Thread t : this.threads) {
             t.start();
         }
-        System.out.println("Iniciando programa");
-        System.out.println("Quantidade de threads: " + this.threads.size());
+
+        for(Thread t : this.animalThreads) {
+            t.start();
+        }
 
         int tempoMaximo = 1000 * 24 * this.dias; // 1000ms * 24h * dias
 

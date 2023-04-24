@@ -10,7 +10,7 @@ class Comedouro {
     }
 
     synchronized void comer(Animal animal, int quantidade) throws InterruptedException {
-        while (comida < animal.consomeMin) {
+        while (this.comida < quantidade) {
 
             if(animal.especie == "Leão"){
                 System.out.println("\u001B[31m" + animal.especie + " " + animal.id + " está esperando comida." + "\u001B[0m");
@@ -22,7 +22,7 @@ class Comedouro {
                 System.out.println("\u001B[32m" + animal.especie + " " + animal.id + " está esperando comida." + "\u001B[0m");
                 System.out.println("\u001B[32m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
             }
-            wait(500);
+            wait();
         }
         if(animal.especie == "Leão"){
             System.out.println("\u001B[31m" + animal.especie + " " + animal.id + " está comendo." + "\u001B[0m");
