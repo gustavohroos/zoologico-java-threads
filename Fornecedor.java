@@ -3,6 +3,9 @@ import java.util.ArrayList;
 public class Fornecedor implements Runnable {
     String nome;
     ArrayList<Estoque> estoques;
+    int quantidadePreenchidaCarne = 0;
+    int quantidadePreenchidaPasto = 0;
+    int quantidadePreenchidaComposto = 0;
 
     Fornecedor(ArrayList<Estoque> estoques, String nome){
         this.nome = nome;

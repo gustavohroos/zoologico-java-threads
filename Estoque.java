@@ -10,7 +10,15 @@ public class Estoque {
     }
 
     synchronized void reabastecer(Fornecedor fornecedor) throws InterruptedException {
+        int faltando = this.capacidade - this.quantidade;
         this.quantidade = this.capacidade;
+        if(this.tipo == "Carne"){
+            fornecedor.quantidadePreenchidaCarne += faltando;
+        } else if(this.tipo == "Composto"){
+            fornecedor.quantidadePreenchidaComposto += faltando;
+        } else {
+            fornecedor.quantidadePreenchidaPasto += faltando;
+        }
         notifyAll();
     }
 }

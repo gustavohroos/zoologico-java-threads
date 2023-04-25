@@ -90,8 +90,6 @@ class Zoologico{
 
         int tempoMaximo = 1000 * 24 * this.dias; // 1000ms * 24h * dias
 
-        // É necessário implementar um mecanismo para que o programa não fique rodando infinitamente.
-
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
@@ -184,7 +182,7 @@ class Zoologico{
         }
         
         System.out.println("Relatório final:");
-        System.out.println("Dias: " + this.dias + "Horas: " + this.dias * 24 + "(segundos)");
+        System.out.println("Dias: " + this.dias + "\nHoras: " + this.dias * 24 + "(segundos)");
         System.out.println("\nComida:");
         System.out.println("Mínimo de comida consumida por um leão: " + minComidaLeao);
         System.out.println("Máximo de comida consumida por um leão: " + maxComidaLeao);
@@ -206,6 +204,12 @@ class Zoologico{
         System.out.println("Mínimo de horas dormidas por um avestruz: " + minHorasDormidasAvestruz);
         System.out.println("Máximo de horas dormidas por um avestruz: " + maxHorasDormidasAvestruz);
         System.out.println("Média de horas dormidas pelos avestruzes por dia: " + totalHorasDormidasAvestruzes / 7 / this.dias);
+
+        System.out.println("\nQuantidades preenchidas pelo fornecedor:");
+        System.out.println("Estoque carne: " + this.fornecedor.quantidadePreenchidaCarne);
+        System.out.println("Estoque composto: " + this.fornecedor.quantidadePreenchidaComposto);
+        System.out.println("Estoque pasto: " + this.fornecedor.quantidadePreenchidaPasto);
+
 
         System.out.println("\nFim do programa");
     }
