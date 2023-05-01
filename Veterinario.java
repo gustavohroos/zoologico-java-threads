@@ -12,14 +12,14 @@ public class Veterinario implements Runnable {
 
     public void run() {
         while(true) {
-            for(Comedouro c : this.comedouros){
-                try{
+            try{
+                for(Comedouro c : this.comedouros){
                     if(c.comida < c.capacidade){
                         c.encher(this);
                     }
-                } catch (Exception e) {
-                    return;
                 }
+            } catch (Exception e) {
+                return;
             }
         }
     }   
