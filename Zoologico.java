@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.io.PrintWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 class Zoologico{
     ArrayList<Comedouro> comedouros = new ArrayList<Comedouro>();
@@ -180,7 +183,45 @@ class Zoologico{
                 maxHorasDormidasAvestruz = avestruz.horasDormidas;
             }
         }
-        
+
+        String fileName = "relatorio_" + this.dias + "_dias.txt";
+        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+            writer.println("Relatório final:");
+            writer.println("Dias: " + this.dias);
+            writer.println("Horas: " + this.dias * 24 + "(segundos)\n");
+
+            writer.println("Comida:");
+            writer.println("Mínimo de comida consumida por um leão: " + minComidaLeao);
+            writer.println("Máximo de comida consumida por um leão: " + maxComidaLeao);
+            writer.println("Média de comida consumida pelos leões por refeição: " + totalComidaLeoes / 4 / this.dias / 2);
+            writer.println("Mínimo de comida consumida por um suricato: " + minComidaSuricato);
+            writer.println("Máximo de comida consumida por um suricato: " + maxComidaSuricato);
+            writer.println("Média de comida consumida pelos suricatos por refeição: " + totalComidaSuricatos / 10 / this.dias / 2);
+            writer.println("Mínimo de comida consumida por um avestruz: " + minComidaAvestruz);
+            writer.println("Máximo de comida consumida por um avestruz: " + maxComidaAvestruz);
+            writer.println("Média de comida consumida pelos avestruzes por refeição: " + totalComidaAvestruzes / 7 / this.dias / 2 + "\n");
+
+            writer.println("Horas dormidas:");
+            writer.println("Mínimo de horas dormidas por um leão: " + minHorasDormidasLeao);
+            writer.println("Máximo de horas dormidas por um leão: " + maxHorasDormidasLeao);
+            writer.println("Média de horas dormidas pelos leões por dia: " + totalHorasDormidasLeoes / 4 / this.dias);
+            writer.println("Mínimo de horas dormidas por um suricato: " + minHorasDormidasSuricato);
+            writer.println("Máximo de horas dormidas por um suricato: " + maxHorasDormidasSuricato);
+            writer.println("Média de horas dormidas pelos suricatos por dia: " + totalHorasDormidasSuricatos / 10 / this.dias);
+            writer.println("Mínimo de horas dormidas por um avestruz: " + minHorasDormidasAvestruz);
+            writer.println("Máximo de horas dormidas por um avestruz: " + maxHorasDormidasAvestruz);
+            writer.println("Média de horas dormidas pelos avestruzes por dia: " + totalHorasDormidasAvestruzes / 7 / this.dias + "\n");
+
+            writer.println("Quantidades preenchidas pelo fornecedor:");
+            writer.println("Estoque carne: " + this.fornecedor.quantidadePreenchidaCarne);
+            writer.println("Estoque composto: " + this.fornecedor.quantidadePreenchidaComposto);
+            writer.println("Estoque pasto: " + this.fornecedor.quantidadePreenchidaPasto + "\n");
+
+            writer.println("Fim do relatório.");
+        } catch (IOException e) {
+            System.out.println("Erro ao escrever o arquivo " + fileName);
+        }
+
         System.out.println("Relatório final:");
         System.out.println("Dias: " + this.dias + "\nHoras: " + this.dias * 24 + "(segundos)");
         System.out.println("\nComida:");
@@ -210,9 +251,7 @@ class Zoologico{
         System.out.println("Estoque composto: " + this.fornecedor.quantidadePreenchidaComposto);
         System.out.println("Estoque pasto: " + this.fornecedor.quantidadePreenchidaPasto);
 
-
         System.out.println("\nFim do programa");
     }
-
 }
 
