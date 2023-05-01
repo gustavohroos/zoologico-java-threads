@@ -45,13 +45,8 @@ class Comedouro {
         while(this.estoque.quantidade == 0){
             wait(500);
         }
-        if(this.estoque.quantidade < (this.capacidade - this.comida)){
-            this.comida += this.estoque.quantidade;
-            this.estoque.quantidade = 0;
-        } else {
-            this.estoque.quantidade -= (this.capacidade - this.comida);
-            this.comida = this.capacidade;
-        }
+        this.estoque.quantidade -= 1;
+        this.comida += 1;
         
         notifyAll();
     }
