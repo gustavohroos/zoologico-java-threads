@@ -1,5 +1,5 @@
 public class Estoque {
-    int capacidade;
+    final int capacidade;
     int quantidade;
     String tipo;
 
@@ -11,6 +11,8 @@ public class Estoque {
 
     synchronized void reabastecer(Fornecedor fornecedor) throws InterruptedException {
         int faltando = this.capacidade - this.quantidade;
+        System.out.println("\u001B[34m" + "O fornecedor " + fornecedor.nome + " está enchendo o estoque de " + this.tipo + "." + "\u001B[0m");
+        System.out.println("\u001B[34m" + "Estava (" + this.quantidade + "/" + this.capacidade + ").\u001B[0m");
         this.quantidade = this.capacidade;
         if(this.tipo == "Carne"){
             fornecedor.quantidadePreenchidaCarne += faltando;
