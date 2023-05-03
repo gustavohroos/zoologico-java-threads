@@ -37,7 +37,7 @@ class Comedouro {
             System.out.println("\u001B[32m" + "Comida no comedouro: " + this.comida + "\u001B[0m");
             System.out.println("\u001B[32m" + "Comida consumida: " + quantidade + "\u001B[0m");
         }
-        this.comida -= quantidade;
+        this.modificarComedouro(quantidade * -1);
         notifyAll();
     }
 
@@ -45,10 +45,16 @@ class Comedouro {
         while(this.estoque.quantidade == 0){
             wait(500);
         }
+        int faltando = this.capacidade - this.comida;
 
         this.estoque.modificarEstoque(-1);
-        this.comida += 1;
+        this.modificarComedouro(faltando);
         
+        notifyAll();
+    }
+
+    synchronized void modificarComedouro(int quantidade) throws InterruptedException {
+        this.comida += quantidade;
         notifyAll();
     }
 }
