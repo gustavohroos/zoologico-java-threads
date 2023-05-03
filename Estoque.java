@@ -13,7 +13,7 @@ public class Estoque {
         int faltando = this.capacidade - this.quantidade;
         System.out.println("\u001B[34m" + "O fornecedor " + fornecedor.nome + " está enchendo o estoque de " + this.tipo + "." + "\u001B[0m");
         System.out.println("\u001B[34m" + "Estava (" + this.quantidade + "/" + this.capacidade + ").\u001B[0m");
-        this.quantidade = this.capacidade;
+        this.modificarEstoque(faltando);
         if(this.tipo == "Carne"){
             fornecedor.quantidadePreenchidaCarne += faltando;
         } else if(this.tipo == "Composto"){
@@ -21,6 +21,11 @@ public class Estoque {
         } else {
             fornecedor.quantidadePreenchidaPasto += faltando;
         }
+        notifyAll();
+    }
+
+    synchronized void modificarEstoque(int quantidade) throws InterruptedException {
+        this.quantidade += quantidade;
         notifyAll();
     }
 }

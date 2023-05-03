@@ -45,7 +45,8 @@ class Comedouro {
         while(this.estoque.quantidade == 0){
             wait(500);
         }
-        this.estoque.quantidade -= 1;
+
+        this.estoque.modificarEstoque(-1);
         this.comida += 1;
         
         notifyAll();
