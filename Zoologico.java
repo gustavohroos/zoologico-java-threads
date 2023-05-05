@@ -100,6 +100,7 @@ class Zoologico{
                 for(Thread t : threads) {
                     t.interrupt();
                 }
+                Thread.sleep(2000);
                 imprimir();
                 System.exit(0);
             }
