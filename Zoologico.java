@@ -97,12 +97,16 @@ class Zoologico{
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                for(Thread t : threads) {
-                    t.interrupt();
+                try{
+                    for(Thread t : threads) {
+                        t.interrupt();
+                    }
+                    Thread.sleep(2000);
+                    imprimir();
+                    System.exit(0);
+                } catch (Exception e) {
+                    return;
                 }
-                Thread.sleep(2000);
-                imprimir();
-                System.exit(0);
             }
         }, tempoMaximo);
     }

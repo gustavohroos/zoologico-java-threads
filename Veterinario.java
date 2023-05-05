@@ -16,6 +16,8 @@ public class Veterinario implements Runnable {
                 for(Comedouro c : this.comedouros){
                     if(c.comida < c.capacidade){
                         c.encher(this);
+                    } else {
+                        Thread.sleep(500);
                     }
                 }
             } catch (Exception e) {

@@ -21,6 +21,8 @@ public class Fornecedor implements Runnable {
                         this.estoques.get(0).reabastecer(this);
                         this.estoques.get(1).reabastecer(this);
                         this.estoques.get(2).reabastecer(this);
+                    } else {
+                        Thread.sleep(1000);
                     }
                 }
             } catch (Exception e) {
