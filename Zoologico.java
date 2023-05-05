@@ -189,7 +189,7 @@ class Zoologico{
             }
         }
 
-        String fileName = "relatorio_" + this.dias + "_dias.txt";
+        String fileName = "relatorio_" + String.format("%03d", this.dias) + "_dias.txt";
         try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
             writer.println("Relatório final:");
             writer.println("Dias: " + this.dias);

@@ -45,10 +45,9 @@ class Comedouro {
         while(this.estoque.quantidade == 0){
             wait(500);
         }
-        int faltando = this.capacidade - this.comida;
 
         this.estoque.modificarEstoque(-1);
-        this.modificarComedouro(faltando);
+        this.modificarComedouro(1);
         
         notifyAll();
     }
