@@ -4,29 +4,29 @@ Horas: 360(segundos)
 
 Comida:
 Mínimo de comida consumida por um leão: 100
-Máximo de comida consumida por um leão: 105
-Média de comida consumida pelos leões por refeição: 3.425
-Mínimo de comida consumida por um suricato: 42
-Máximo de comida consumida por um suricato: 49
-Média de comida consumida pelos suricatos por refeição: 1.5266666
-Mínimo de comida consumida por um avestruz: 86
-Máximo de comida consumida por um avestruz: 93
-Média de comida consumida pelos avestruzes por refeição: 2.9714286
+Máximo de comida consumida por um leão: 119
+Média de comida consumida pelos leões por refeição: 3.5916667
+Mínimo de comida consumida por um suricato: 43
+Máximo de comida consumida por um suricato: 50
+Média de comida consumida pelos suricatos por refeição: 1.5233333
+Mínimo de comida consumida por um avestruz: 85
+Máximo de comida consumida por um avestruz: 92
+Média de comida consumida pelos avestruzes por refeição: 2.9571428
 
 Horas dormidas:
-Mínimo de horas dormidas por um leão: 147
-Máximo de horas dormidas por um leão: 158
-Média de horas dormidas pelos leões por dia: 10.216666
-Mínimo de horas dormidas por um suricato: 117
-Máximo de horas dormidas por um suricato: 128
-Média de horas dormidas pelos suricatos por dia: 8.113333
-Mínimo de horas dormidas por um avestruz: 75
-Máximo de horas dormidas por um avestruz: 96
-Média de horas dormidas pelos avestruzes por dia: 5.7809525
+Mínimo de horas dormidas por um leão: 148
+Máximo de horas dormidas por um leão: 156
+Média de horas dormidas pelos leões por dia: 10.1
+Mínimo de horas dormidas por um suricato: 113
+Máximo de horas dormidas por um suricato: 130
+Média de horas dormidas pelos suricatos por dia: 8.053333
+Mínimo de horas dormidas por um avestruz: 84
+Máximo de horas dormidas por um avestruz: 100
+Média de horas dormidas pelos avestruzes por dia: 6.1428576
 
 Quantidades preenchidas pelo fornecedor:
-Estoque carne: 408
-Estoque composto: 437
-Estoque pasto: 604
+Estoque carne: 171
+Estoque composto: 420
+Estoque pasto: 288
 
 Fim do relatório.
