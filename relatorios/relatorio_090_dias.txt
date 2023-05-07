@@ -3,30 +3,30 @@ Dias: 90
 Horas: 2160(segundos)
 
 Comida:
-Mínimo de comida consumida por um leão: 623
-Máximo de comida consumida por um leão: 657
-Média de comida consumida pelos leões por refeição: 3.5375
-Mínimo de comida consumida por um suricato: 254
-Máximo de comida consumida por um suricato: 279
-Média de comida consumida pelos suricatos por refeição: 1.4783334
-Mínimo de comida consumida por um avestruz: 525
-Máximo de comida consumida por um avestruz: 559
-Média de comida consumida pelos avestruzes por refeição: 2.997619
+Mínimo de comida consumida por um leão: 618
+Máximo de comida consumida por um leão: 640
+Média de comida consumida pelos leões por refeição: 3.4944444
+Mínimo de comida consumida por um suricato: 268
+Máximo de comida consumida por um suricato: 281
+Média de comida consumida pelos suricatos por refeição: 1.5122223
+Mínimo de comida consumida por um avestruz: 536
+Máximo de comida consumida por um avestruz: 556
+Média de comida consumida pelos avestruzes por refeição: 3.029365
 
 Horas dormidas:
-Mínimo de horas dormidas por um leão: 884
-Máximo de horas dormidas por um leão: 913
-Média de horas dormidas pelos leões por dia: 9.975
-Mínimo de horas dormidas por um suricato: 704
-Máximo de horas dormidas por um suricato: 747
-Média de horas dormidas pelos suricatos por dia: 8.038889
-Mínimo de horas dormidas por um avestruz: 531
-Máximo de horas dormidas por um avestruz: 559
-Média de horas dormidas pelos avestruzes por dia: 6.0190477
+Mínimo de horas dormidas por um leão: 897
+Máximo de horas dormidas por um leão: 932
+Média de horas dormidas pelos leões por dia: 10.077778
+Mínimo de horas dormidas por um suricato: 696
+Máximo de horas dormidas por um suricato: 744
+Média de horas dormidas pelos suricatos por dia: 7.9666667
+Mínimo de horas dormidas por um avestruz: 522
+Máximo de horas dormidas por um avestruz: 555
+Média de horas dormidas pelos avestruzes por dia: 5.9809523
 
 Quantidades preenchidas pelo fornecedor:
-Estoque carne: 1202
-Estoque composto: 2757
-Estoque pasto: 1956
+Estoque carne: 2516
+Estoque composto: 2722
+Estoque pasto: 3800
 
 Fim do relatório.

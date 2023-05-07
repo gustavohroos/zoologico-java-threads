@@ -3,30 +3,30 @@ Dias: 30
 Horas: 720(segundos)
 
 Comida:
-Mínimo de comida consumida por um leão: 200
-Máximo de comida consumida por um leão: 215
-Média de comida consumida pelos leões por refeição: 3.4791667
-Mínimo de comida consumida por um suricato: 79
-Máximo de comida consumida por um suricato: 96
-Média de comida consumida pelos suricatos por refeição: 1.485
-Mínimo de comida consumida por um avestruz: 162
-Máximo de comida consumida por um avestruz: 184
-Média de comida consumida pelos avestruzes por refeição: 2.952381
+Mínimo de comida consumida por um leão: 204
+Máximo de comida consumida por um leão: 226
+Média de comida consumida pelos leões por refeição: 3.55
+Mínimo de comida consumida por um suricato: 85
+Máximo de comida consumida por um suricato: 99
+Média de comida consumida pelos suricatos por refeição: 1.5183333
+Mínimo de comida consumida por um avestruz: 172
+Máximo de comida consumida por um avestruz: 196
+Média de comida consumida pelos avestruzes por refeição: 3.0023808
 
 Horas dormidas:
-Mínimo de horas dormidas por um leão: 296
-Máximo de horas dormidas por um leão: 316
-Média de horas dormidas pelos leões por dia: 10.175
-Mínimo de horas dormidas por um suricato: 234
-Máximo de horas dormidas por um suricato: 257
-Média de horas dormidas pelos suricatos por dia: 8.14
+Mínimo de horas dormidas por um leão: 284
+Máximo de horas dormidas por um leão: 309
+Média de horas dormidas pelos leões por dia: 10.025
+Mínimo de horas dormidas por um suricato: 227
+Máximo de horas dormidas por um suricato: 245
+Média de horas dormidas pelos suricatos por dia: 7.8399997
 Mínimo de horas dormidas por um avestruz: 169
-Máximo de horas dormidas por um avestruz: 178
-Média de horas dormidas pelos avestruzes por dia: 5.766667
+Máximo de horas dormidas por um avestruz: 186
+Média de horas dormidas pelos avestruzes por dia: 5.9190474
 
 Quantidades preenchidas pelo fornecedor:
-Estoque carne: 372
-Estoque composto: 896
-Estoque pasto: 631
+Estoque carne: 827
+Estoque composto: 888
+Estoque pasto: 1226
 
 Fim do relatório.

@@ -3,30 +3,30 @@ Dias: 10
 Horas: 240(segundos)
 
 Comida:
-Mínimo de comida consumida por um leão: 61
-Máximo de comida consumida por um leão: 77
-Média de comida consumida pelos leões por refeição: 3.45
-Mínimo de comida consumida por um suricato: 28
+Mínimo de comida consumida por um leão: 67
+Máximo de comida consumida por um leão: 72
+Média de comida consumida pelos leões por refeição: 3.4625
+Mínimo de comida consumida por um suricato: 30
 Máximo de comida consumida por um suricato: 35
-Média de comida consumida pelos suricatos por refeição: 1.55
-Mínimo de comida consumida por um avestruz: 54
-Máximo de comida consumida por um avestruz: 65
+Média de comida consumida pelos suricatos por refeição: 1.5899999
+Mínimo de comida consumida por um avestruz: 57
+Máximo de comida consumida por um avestruz: 63
 Média de comida consumida pelos avestruzes por refeição: 2.9928572
 
 Horas dormidas:
-Mínimo de horas dormidas por um leão: 95
-Máximo de horas dormidas por um leão: 105
-Média de horas dormidas pelos leões por dia: 10.025
-Mínimo de horas dormidas por um suricato: 73
-Máximo de horas dormidas por um suricato: 90
-Média de horas dormidas pelos suricatos por dia: 7.96
-Mínimo de horas dormidas por um avestruz: 53
-Máximo de horas dormidas por um avestruz: 64
-Média de horas dormidas pelos avestruzes por dia: 6.042857
+Mínimo de horas dormidas por um leão: 96
+Máximo de horas dormidas por um leão: 100
+Média de horas dormidas pelos leões por dia: 9.9
+Mínimo de horas dormidas por um suricato: 78
+Máximo de horas dormidas por um suricato: 89
+Média de horas dormidas pelos suricatos por dia: 8.14
+Mínimo de horas dormidas por um avestruz: 54
+Máximo de horas dormidas por um avestruz: 70
+Média de horas dormidas pelos avestruzes por dia: 5.9142857
 
 Quantidades preenchidas pelo fornecedor:
-Estoque carne: 107
-Estoque composto: 231
-Estoque pasto: 177
+Estoque carne: 262
+Estoque composto: 293
+Estoque pasto: 390
 
 Fim do relatório.

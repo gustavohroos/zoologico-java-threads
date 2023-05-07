@@ -1,0 +1,32 @@
+Relatório final:
+Dias: 180
+Horas: 4320(segundos)
+
+Comida:
+Mínimo de comida consumida por um leão: 1263
+Máximo de comida consumida por um leão: 1283
+Média de comida consumida pelos leões por refeição: 3.538889
+Mínimo de comida consumida por um suricato: 531
+Máximo de comida consumida por um suricato: 555
+Média de comida consumida pelos suricatos por refeição: 1.5063889
+Mínimo de comida consumida por um avestruz: 1054
+Máximo de comida consumida por um avestruz: 1102
+Média de comida consumida pelos avestruzes por refeição: 2.9884923
+
+Horas dormidas:
+Mínimo de horas dormidas por um leão: 1777
+Máximo de horas dormidas por um leão: 1795
+Média de horas dormidas pelos leões por dia: 9.943055
+Mínimo de horas dormidas por um suricato: 1390
+Máximo de horas dormidas por um suricato: 1470
+Média de horas dormidas pelos suricatos por dia: 8.014444
+Mínimo de horas dormidas por um avestruz: 1048
+Máximo de horas dormidas por um avestruz: 1107
+Média de horas dormidas pelos avestruzes por dia: 5.9634924
+
+Quantidades preenchidas pelo fornecedor:
+Estoque carne: 5096
+Estoque composto: 5423
+Estoque pasto: 7522
+
+Fim do relatório.
